@@ -36,7 +36,7 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 ```
 ## Screenshots
 
-<img src= "./asset/screenshot.png" width="500px"/>
+<img src= "https://raw.githubusercontent.com/amadayasuki/Book-Search-Challenge/main/assest/screenshot.png" width="500px"/>
 
 ## Installation and Start Up
 
