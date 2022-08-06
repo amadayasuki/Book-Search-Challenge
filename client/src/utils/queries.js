@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-//comment
+//comment 1
 export const GET_ME = gql`
   {
     me {
