@@ -10,7 +10,7 @@ const { authMiddleware } = require("./utils/auth");
 const server = new ApolloServer({ typeDefs, resolvers, context: authMiddleware });
 
 const app = express();
-const PORT = process.env.PORT || "mongodb://0.0.0.0:27017";
+const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
