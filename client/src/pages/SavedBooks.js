@@ -9,7 +9,8 @@ import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
   const { loading, data } = useQuery(GET_ME);
-  const [removeBook] = useMutation(REMOVE_BOOK);
+  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
+
   const userData = data?.me || {};
 
   const handleDeleteBook = async (bookId) => {
@@ -20,11 +21,11 @@ const SavedBooks = () => {
     }
 
     try {
-      await removeBook({
+      const { data } = await removeBook({
         variables: { bookId },
       });
 
- 
+
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
